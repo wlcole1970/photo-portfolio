@@ -13,7 +13,8 @@ body {
     margin: 0 auto;
     /* height: 100%; */
     font-family: 'IBM Plex Sans', sans-serif;
-    background-color: #EFEFEF ;
+    /* background-color: #EFEFEF ; */
+    background-color: #DDDDDD; 
 }
 
 nav {
@@ -89,11 +90,20 @@ a:active {
 
 #name {
     font-size: 45px;
-    /* color: black; */
     color: white;
     text-transform: uppercase;
+    animation: fadeIn 4s;
 
 }
+
+/* fade in for text in hero */
+
+#fade-in-para {
+    animation: fadeIn 7s; 
+    font-size: 1.1rem;
+}
+
+
 
 .hero-image {
     height: 400px;
@@ -114,8 +124,8 @@ a:active {
 }
 
 .about-me {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     padding: 10px;
     border-radius: 10px;
     background-color: #EFEFEF ;
@@ -125,28 +135,34 @@ a:active {
 }
 
 .info {
-    max-width: 300px;
-    height: 200px;
+    max-width: 400px;
+    height: 300px;
     margin: 30px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-radius: 10px;
     background-color: #EFEFEF ;
+    text-align: center;
 }
 
 .info p {
     margin-top: 5px;
+    
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 }
 
 section {
     width: 100%; /*instead of a hard coded px amount such as 100px*/
     max-height: 500px;
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+    background-color: #DDDDDD;
     border-radius: 10px;
     margin: 10px 0;
     display: flex;
@@ -188,7 +204,8 @@ section {
 #portfolio {
     width: 100%;
      /*instead of a hard coded px amount such as 100px*/
-    background-color: #F9F9F9;
+    /* background-color: #F9F9F9; */
+    background-color: #DDDDDD;
     border-radius: 10px;
     padding: 0 5px;
     display: grid;
@@ -198,9 +215,105 @@ section {
 
 }
 
+
 .port-img {
     border-radius: 20px;
+    height: 400px;
+    width: 400px;
 }
+
+.port-img img{
+    border-radius: 20px;
+    background-position: center;
+    transition: 0.5s all ease-in-out;
+}
+
+
+/* #images1 { 
+    animation: fadeIn 2s;
+} */
+
+.portfolio-container {
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    margin: auto; 
+    overflow: hidden;
+    /* border: 5px solid black; */
+    align-content: center;
+
+}
+
+.portfolio-slide {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    /* overflow: hidden; */
+}
+
+.portfolio-slide img{
+    /* border-radius: 20px;  */
+    /* background-position: center; */
+    /* transition: 0.5s all ease-in-out; */
+    height: 100%;
+     width: 100%;
+}
+
+
+#prevButton {
+    position:absolute;
+    top: 50%;
+    z-index: -10;
+    left: 5%;
+    font-size: 50px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#nextButton {
+    position:absolute;
+    top: 50%;
+    z-index: -10;
+    right: 15%;
+    font-size: 50px;
+    color: white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.fade-in {
+    animation: fadeIn 6s;
+
+}
+
+.fade-out {
+    animation: fadeOut 6s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+    
+}
+
+
 
 #contact-form {
     height: 300px;
