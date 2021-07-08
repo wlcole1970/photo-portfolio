@@ -256,8 +256,73 @@ section {
     /* background-position: center; */
     /* transition: 0.5s all ease-in-out; */
     height: 100%;
-     width: 100%;
+     /* width: 100%; */
 }
+
+
+/* new slider test  */
+#slider {
+    overflow: hidden;
+    align-content: center;
+    /* max-width: 1000px; */
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    
+    animation: 20s slider infinite;
+}
+
+#slider figure img {
+    float: left;
+    width: 100%;
+    /* border-radius: 10px; */
+}
+
+@keyframes slider {
+    
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }    
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+    
+    100% {
+        left: -400%;
+    }
+
+}
+
+
+/* end of new slider test  */
 
 
 #prevButton {
